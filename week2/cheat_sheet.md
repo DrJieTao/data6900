@@ -106,6 +106,44 @@ Excellent plan. Now, translate this exact text plan into Mermaid Code (graph TD)
 
 ---
 
+### **Debugging: What if the Code Breaks? (The Iterative Mindset)**
+
+**The Reality:** LLMs are probability engines, not logic engines. They often write broken Mermaid code (or later, broken n8n workflows).
+
+**The Golden Rule:** Do not panic. Do not try to fix the syntax yourself (unless you know how).
+
+#### **Level 1: The "Repair Loop" (Try this first)**
+1.  **Run it:** Paste the code into the tool (Mermaid Live).
+2.  **Catch the Error:** If it turns red or says "Syntax Error," **copy that error message**.
+3.  **Feedback:** Paste the error message *back* to the AI.
+
+**Repair Template:**
+```markdown
+I tried to run your code, but I got this error:
+[Paste the Error Message Here]
+
+Fix the code and explain what went wrong.
+```
+
+#### **Level 2: The "Pivot" Strategies (If it's still stuck)**
+If the AI keeps giving you broken code after 2 tries, stop. It is stuck in a bad loop. Use these strategies to unstick it.
+
+**Strategy A: Simplify (Remove the "Bling")**
+Often, the AI breaks because it tries to add fancy colors, icons, or complex sub-graphs. Tell it to go back to basics.
+> **Prompt:** "The code is still breaking. Remove all styling, colors, and icons. Just give me a simple, standard flowchart with boxes and arrows."
+
+**Strategy B: Change Structure**
+Sometimes a specific graph type causes issues. Ask for a different layout.
+> **Prompt:** "Let's try a different structure. Instead of a `graph TD` (Top-Down), try using `flowchart LR` (Left-Right). Keep the logic, but change the syntax."
+
+**Strategy C: Decompose (The "Part-by-Part" Approach)**
+If the workflow is huge, the AI might be overwhelmed. Ask it to map just the first half.
+> **Prompt:** "Let's debug this by splitting it up. Just write the Mermaid code for Step 1 and Step 2. Do not include the rest yet."
+
+**Why this matters:** In Part 2 of this course, we will use AI to write complex n8n automation code. It *will* break. Learning to calmly use this "Repair Loop" and "Pivot" strategy now is the most important skill for an AI Engineer. Code generation is always an iterative process, not a "one-shot" magic trick.
+
+---
+
 ### **Summary: The "Architect's Loop"**
 
 1.  **Interview:** "Ask me questions."
