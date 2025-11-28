@@ -1,7 +1,7 @@
 # Week 3 Cheatsheet: The Engineer's Toolkit 🛠️
 **Theme:** From "Prompt Engineering" to "Workflow Architecture"
 
-In Week 3, we stop treating the AI as a chatbot and start treating it as a **Stateless Processing Node**. This guide provides the code snippets and patterns needed to build your **Linear Assembly Line**.
+In Week 3, we stop treating the AI as a chatbot and start treating it as a **Stateless Processing Node**. This guide provides the code snippets, templates, and specifications needed to build your **Linear Assembly Line**.
 
 ---
 
@@ -17,7 +17,50 @@ To build a reliable chain, you must change the **Audience** and **Format** at ea
 
 ---
 
-### **2. The "Clean Data" Discipline**
+### **2. Spec-Driven Development (SDD)**
+
+Before you write a prompt, define the **Spec**. Use this Canvas to plan your logic.
+
+#### **A. The Tool Design Canvas (Copy & Fill)**
+
+```markdown
+### TOOL SPECIFICATION CARD
+**Tool Name:** (e.g., The Gatekeeper)
+**Goal:** (What is the single specific job of this node?)
+
+**Input Variables:**
+- {{variable_name}}: (Type: String/JSON?)
+
+**Processing Logic (The "Black Box"):**
+1. (Step 1: e.g., Read the input)
+2. (Step 2: e.g., Extract specific entities)
+3. (Step 3: e.g., Apply constraints)
+
+**Output Schema:**
+- Format: (JSON / XML / Text)
+- Keys/Tags Required: (List them here)
+
+**Failure Mode (Grounding):**
+- If data is missing or ambiguous, output: (e.g., "NULL" or "UNKNOWN")
+```
+
+#### **B. The "Pseudo-Code" Visualization**
+*Think of your tool as a software function. If you can write this, your prompt will be rock solid.*
+
+```python
+# Example: The Gatekeeper Spec
+def extract_data(email_body: String) -> JSON:
+    """
+    1. Analyze {{email_body}}.
+    2. Extract 'amount' (number) and 'issue' (string).
+    3. If data is missing, return null.
+    4. Output RAW JSON only.
+    """
+```
+
+---
+
+### **3. The "Clean Data" Discipline**
 
 #### **A. The Handlebars Syntax `{{variable}}`**
 In automation (and n8n), we don't paste data directly into the prompt. We use placeholders.
@@ -34,9 +77,7 @@ When a node talks to another machine (like Node 1 $\to$ Node 2), it **cannot** b
 
 ---
 
-### **3. The Node Templates (Copy-Paste Ready)**
-
-Use these templates for your PDD. Note the **Developer Check** comments—use these to verify your logic is sound.
+### **4. The Node Templates (Copy-Paste Ready)**
 
 #### **Node 1: The Gatekeeper (Extraction)**
 *Use this to turn messy text into structured data.*
@@ -56,8 +97,6 @@ Keys required: "entity_1", "entity_2", "sentiment".
 Analyze the input provided in {{input_text}}.
 Extract the relevant entities into the JSON format defined above.
 If a data point is missing, return null. Do not guess.
-
-<!-- DEVELOPER CHECK: def extract(text) -> JSON -->
 ```
 
 #### **Node 2: The Judge (Logic & Reasoning)**
@@ -79,8 +118,6 @@ Use XML tags to separate thinking from the decision:
 Review the data provided in {{extracted_json}}.
 1. Reason through the rules in <thinking> tags.
 2. Output the final decision in <verdict> tags.
-
-<!-- DEVELOPER CHECK: def judge(json) -> XML {thinking, verdict} -->
 ```
 
 #### **Node 3: The Worker (Generation)**
@@ -99,13 +136,11 @@ Plain text (Natural Language).
 # Task
 Generate the final response based on the decision in {{verdict}}.
 Do not mention the internal logic or policy codes. Keep the tone [Professional/Friendly].
-
-<!-- DEVELOPER CHECK: def draft(verdict) -> String -->
 ```
 
 ---
 
-### **4. The Auto-Simulator (The "Meta-Prompt")**
+### **5. The Auto-Simulator (The "Meta-Prompt")**
 
 Use this prompt to test your entire chain logic in one go inside ChatGPT/Claude.
 
@@ -137,17 +172,8 @@ I will provide an input. You must simulate the execution:
 
 ---
 
-### **5. Reliability & Debugging Checklist**
+### **6. Reliability Checklist**
 
-Before you submit your PDD, check your work against these safety features.
-
-#### **Pattern 5: The "Grounding" Instruction**
-*   **The Problem:** The AI hallucinates data that isn't there to be helpful.
-*   **The Fix:** Add this specific line to your Gatekeeper and Judge prompts:
-    > *"Answer ONLY using the provided Input. If the answer is not explicitly found, output 'NULL' or 'UNKNOWN'. Do not guess."*
-
-#### **The "Repair Loop" (When Mermaid/JSON Breaks)**
-If the AI gives you broken code or bad JSON, do not fix it yourself.
-1.  **Catch the Error:** Copy the error message (or the broken text).
-2.  **Feedback:** Paste it back to the AI with: *"I got this error: [Paste Error]. Fix the code."*
-3.  **Pivot:** If it fails twice, simplify the request (e.g., "Remove the styling").
+*   **[ ] Grounding:** Did you tell the Gatekeeper to output `null` if data is missing?
+*   **[ ] Edge Cases:** Did you test it with "Garbage/Spam" input? Does it fail gracefully?
+*   **[ ] Repair Loop:** If the AI outputs broken code/JSON, did you paste the error message back to fix it?
