@@ -1,4 +1,4 @@
-# Artifact 2: Week 2 Assignment Instructions (Revised)
+# Week 2 Assignment Instructions 
 
 **Assignment:** Milestone 1 - Process Analysis
 **Due:** Before Week 3 Live Session.
