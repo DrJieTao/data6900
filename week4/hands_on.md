@@ -7,7 +7,7 @@
 ---
 
 ### **The Artifact: `Adaptive_System_Definition.md`**
-*(This mirrors the structure of the original course's `chat-log.txt`. It is a "System Definition File" that students will paste into the LLM.)*
+*(It is a "System Definition File" that students will paste into the LLM.)*
 
 ```markdown
 # 1. Role
