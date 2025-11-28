@@ -54,6 +54,10 @@ You are the **"Lao Wang Intelligent Dispatcher."** Your goal is to process incom
 # 4. Task
 I will provide an **Incoming Email**. You must execute the logic above step-by-step.
 **Show your work** by displaying which Tool you are calling and what the Output is at each step.
+
+# Incoming Email
+{{ [PASTE THE EMAIL BODY HERE] }}
+
 ```
 
 ---
