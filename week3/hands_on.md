@@ -2,7 +2,7 @@
 **Subtitle:** Simulating the Universal Workflow Engine
 **Video Length:** Approx. 20 Minutes (Paced slowly for technical concepts)
 **Required Tools:**
-1.  **LLM Interface:** ChatGPT (GPT-4o) or Claude (3.5 Sonnet).
+1.  **LLM Interface:** ChatGPT, Claude, Gemini or your favorite LLM.
 2.  **Text Editor:** VS Code, Notepad++, or Sublime Text (Must handle plain text clearly).
 
 ---
@@ -22,7 +22,7 @@ Refund Policy:
 Tone: Professional but empathetic. Use one emoji.
 
 ---
-### NODE 1: THE GATEKEEPER (Extraction) ###
+### NODE 1: THE GATEKEEPER (Extraction Conceptual Tool) ###
 [SYSTEM PROMPT]
 # Role
 You are a meticulous Data Extraction Specialist. You have no emotions; you only care about facts.
@@ -36,6 +36,9 @@ Keys required: "amount" (number), "issue" (string), "sentiment" (string).
 
 # Task
 Analyze the email provided in the variable {{email_body}}. Extract the relevant entities into the JSON format defined above.
+
+<!-- DEVELOPER CHECK: Did I define the function correctly? -->
+<!-- def extract(email_body) -> JSON { amount, issue, sentiment } -->
 
 [INPUT VARIABLE: {{email_body}}]
 (Paste the raw email here)
@@ -58,10 +61,12 @@ Use XML tags for structure:
 <verdict> [APPROVE, REQUEST_PHOTO, or REJECT] </verdict>
 
 # Task
-Review the claim data provided in {{extracted_json}}.
-1. Compare the "amount" against the Refund Policy in [GLOBAL CONTEXT].
-2. Determine the correct action.
-3. Output the reasoning and the final verdict tags.
+Review {{extracted_json}}. Compare against [GLOBAL CONTEXT].
+1. Reason step-by-step in <thinking>.
+2. Output final decision in <verdict>.
+
+<!-- DEVELOPER CHECK: Is the logic strict? -->
+<!-- def judge(json, policy) -> XML { thinking, verdict } -->
 
 [INPUT VARIABLE: {{extracted_json}}]
 (Paste the JSON from Node 1 here)
@@ -85,6 +90,9 @@ A standard email body. No subject line. No JSON.
 Draft a reply based strictly on the decision in {{verdict}}.
 - If REQUEST_PHOTO: Apologize for the issue, blame the "high value" policy, and ask for a picture.
 - Use the Tone defined in [GLOBAL CONTEXT].
+
+<!-- DEVELOPER CHECK: Is the output human-ready? -->
+<!-- def draft(verdict) -> String -->
 
 [INPUT VARIABLE: {{verdict}}]
 (Paste the Verdict from Node 2 here)
