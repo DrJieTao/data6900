@@ -36,6 +36,8 @@ When a node talks to another machine (like Node 1 $\to$ Node 2), it **cannot** b
 
 ### **3. The Node Templates (Copy-Paste Ready)**
 
+Use these templates for your PDD. Note the **Developer Check** comments—use these to verify your logic is sound.
+
 #### **Node 1: The Gatekeeper (Extraction)**
 *Use this to turn messy text into structured data.*
 
@@ -47,12 +49,15 @@ You are a meticulous Data Extraction Specialist. You have no emotions; you only 
 The audience is a downstream computer program. It cannot read conversational text.
 
 # Format
-Output RAW JSON ONLY.
+Output RAW JSON ONLY. Do not use Markdown backticks.
 Keys required: "entity_1", "entity_2", "sentiment".
 
 # Task
 Analyze the input provided in {{input_text}}.
 Extract the relevant entities into the JSON format defined above.
+If a data point is missing, return null. Do not guess.
+
+<!-- DEVELOPER CHECK: def extract(text) -> JSON -->
 ```
 
 #### **Node 2: The Judge (Logic & Reasoning)**
@@ -64,7 +69,7 @@ You are a strict Policy Compliance Officer.
 
 # Format
 Use XML tags to separate thinking from the decision:
-<thinking> [Step-by-step reasoning] </thinking>
+<thinking> [Step-by-step reasoning against the rules] </thinking>
 <verdict> [FINAL_DECISION] </verdict>
 
 # Context
@@ -74,6 +79,8 @@ Use XML tags to separate thinking from the decision:
 Review the data provided in {{extracted_json}}.
 1. Reason through the rules in <thinking> tags.
 2. Output the final decision in <verdict> tags.
+
+<!-- DEVELOPER CHECK: def judge(json) -> XML {thinking, verdict} -->
 ```
 
 #### **Node 3: The Worker (Generation)**
@@ -92,6 +99,8 @@ Plain text (Natural Language).
 # Task
 Generate the final response based on the decision in {{verdict}}.
 Do not mention the internal logic or policy codes. Keep the tone [Professional/Friendly].
+
+<!-- DEVELOPER CHECK: def draft(verdict) -> String -->
 ```
 
 ---
@@ -128,13 +137,17 @@ I will provide an input. You must simulate the execution:
 
 ---
 
-### **5. Reliability Checklist (Safety Features)**
+### **5. Reliability & Debugging Checklist**
 
-Before you finalize your PDD, check these 3 safety features:
+Before you submit your PDD, check your work against these safety features.
 
-*   **[ ] The Grounding Instruction:** Did you tell the Gatekeeper what to do if data is missing?
-    *   *Add:* "If the data is not explicitly found in the input, output `null`. Do not guess."
-*   **[ ] The Edge Case Test:** Did you run a "Spam" or "Irrelevant" input through your Simulator?
-    *   *Goal:* The Judge should catch it and output `<verdict>IGNORE</verdict>` (or similar) instead of writing a confused email.
-*   **[ ] The Separation of Concerns:** Does the Worker know too much?
-    *   *Goal:* The Worker should ideally only see the *Verdict*, not the raw angry email, to prevent it from getting defensive.
+#### **Pattern 5: The "Grounding" Instruction**
+*   **The Problem:** The AI hallucinates data that isn't there to be helpful.
+*   **The Fix:** Add this specific line to your Gatekeeper and Judge prompts:
+    > *"Answer ONLY using the provided Input. If the answer is not explicitly found, output 'NULL' or 'UNKNOWN'. Do not guess."*
+
+#### **The "Repair Loop" (When Mermaid/JSON Breaks)**
+If the AI gives you broken code or bad JSON, do not fix it yourself.
+1.  **Catch the Error:** Copy the error message (or the broken text).
+2.  **Feedback:** Paste it back to the AI with: *"I got this error: [Paste Error]. Fix the code."*
+3.  **Pivot:** If it fails twice, simplify the request (e.g., "Remove the styling").
