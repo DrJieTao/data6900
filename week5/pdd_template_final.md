@@ -77,6 +77,8 @@ graph TD
 | **Edge Case** | *(Your Test)* | *(Result)* |
 | **Ethical Trap** | *(Your Test)* | *(Result)* |
 
+Use the [Attack Log Document](https://docs.google.com/document/d/1AZxFZOTo-YmSuzo4AiQGG48PFBPgA8sGtca2tph71zE/edit?usp=sharing) as a template.
+
 ---
 
 ## Part 5: The Business Case (Strategy)
