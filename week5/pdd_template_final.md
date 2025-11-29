@@ -77,7 +77,7 @@ graph TD
 | **Edge Case** | *(Your Test)* | *(Result)* |
 | **Ethical Trap** | *(Your Test)* | *(Result)* |
 
-Use the [Attack Log Document](https://docs.google.com/document/d/1AZxFZOTo-YmSuzo4AiQGG48PFBPgA8sGtca2tph71zE/edit?usp=sharing) as a template.
+> Use the [Attack Log Document](https://docs.google.com/document/d/1AZxFZOTo-YmSuzo4AiQGG48PFBPgA8sGtca2tph71zE/edit?usp=sharing) as a template.
 
 ---
 
@@ -95,6 +95,7 @@ Use the [Attack Log Document](https://docs.google.com/document/d/1AZxFZOTo-YmSuz
 
 ### 5.2 The ROI Analysis (The Math Lab)
 *Summarize the data from your ROI Excel Template.*
+> Use the [ROI Calculator](https://docs.google.com/spreadsheets/d/1zlx3lEMb58CJn8vYik4nDZPEhxNS0QWVE_yxcFMABh8/edit?usp=sharing) for help.
 
 *   **Total Cost of Ownership (Year 1):** $ \_\_\_\_\_\_\_\_\_\_
     *   *(Includes Dev Time + Maintenance + API Costs)*
