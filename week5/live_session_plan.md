@@ -9,12 +9,15 @@
 
 ### **TIME ALLOCATION OVERVIEW**
 
-| Component | Duration | % of Class |
+| Component | Duration | Activity |
 | :--- | :--- | :--- |
-| **Instruction & Setup** | 35 Minutes | 19% |
-| **Hands-On Work** | **105 Minutes** | **58%** |
-| **Discussion & Debrief** | 40 Minutes | 22% |
-| **Total** | **180 Minutes** | **100%** |
+| **Part 1** | 15 Mins | Warm-Up (Air Canada) |
+| **Part 2** | **50 Mins** | Auditor Workshop (Build Safety) |
+| **Part 3** | **40 Mins** | Red Teaming (Stress Test) |
+| **Part 4a** | **15 Mins** | **NEW: The Pain Audit (Define KPI)** |
+| **Part 4b** | **45 Mins** | The Math Lab (Calculate ROI) |
+| **Part 5** | 15 Mins | Wrap-Up |
+| **Total** | **180 Mins** | |
 
 ---
 
@@ -76,8 +79,31 @@
 
 ---
 
-#### **PART 4: THE MATH LAB (2:05 – 2:50)**
-*Goal: Calculate the Break-Even Point (ROI).*
+#### **PART 4a: THE PAIN AUDIT (KPI Strategy)**
+**Time:** 15 Minutes
+**Goal:** Define *one* SMART KPI based on Pain, not Vanity.
+
+*   **0:00 – 0:05 | Instruction: Pain vs. Vanity**
+    *   **Concept:** "Stop measuring the robot. Measure the human pain."
+    *   **The 'So What?' Test:**
+        *   *Student:* "My bot has 95% accuracy."
+        *   *Instructor:* "So what?"
+        *   *Student:* "It answers emails faster."
+        *   *Instructor:* "So what?"
+        *   *Student:* "I save 4 hours a week."
+        *   *Instructor:* "There is your KPI."
+*   **0:05 – 0:15 | Hands-On: The KPI Sentence**
+    *   **Task:** Students must write **one sentence** in the Zoom Chat (or on a sticky note):
+        *   *"My Pain is [X]. My Proxy Metric is [Y]. My Goal is to move it from [A] to [B]."*
+    *   **Example:** *"My Pain is weekend work. My Metric is 'Hours worked on Saturday.' Goal: Reduce from 4h to 0h."*
+    *   **Instructor Feedback:** Rapidly validate/correct 3-4 examples live. "That's a vanity metric, try again."
+
+#### **PART 4b: THE MATH LAB (ROI Execution)**
+**Time:** 45 Minutes (Unchanged)
+**Goal:** Put a price tag on that KPI.
+
+*   *Now* they open the Excel Sheet.
+*   Because they did Part 4a, they know exactly what to put in the "Time Saved" or "Error Reduction" cells.
 
 *   **2:05 – 2:15 | Instruction: The "Iceberg" & Pain Mapping**
     *   **Concept:** Review *Cheat Sheet (Side B)*.
@@ -125,6 +151,3 @@
 
 ---
 
-This plan uses every minute of the 180-minute block, ensuring students leave with **verified safety** and **quantified value** for their projects.
-
-**Ready to move on to the next step?**
