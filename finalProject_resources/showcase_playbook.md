@@ -25,9 +25,9 @@
     *   Show the **Auditor Node** blocking it.
     *   *Commentary:* "A cheaper bot would have just refunded $5,000 here. Our governance layer caught it, saving the company from fraud."
 4. Other contents to consider (IMPORTANT):
-  * *what we delivered is a detailed "proof of concept" - the student group ("we") are willing to work with your organization to make it production level*
-  * *user training/testing plan*
-  * *other measures to make it to the next level (production)* 
+     * *what we delivered is a detailed "proof of concept" - the student group ("we") are willing to work with your organization to make it production level*
+     * *user training/testing plan*
+     * *other measures to make it to the next level (production)* 
 
 #### **PART 3: THE INQUISITION (25:00 - 45:00)**
 *Prepare for the Partner's Questions.*
