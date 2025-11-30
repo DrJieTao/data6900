@@ -76,8 +76,8 @@ Your grade is a reflection of the quality of work you would deliver to a client 
 | - Milestone 3: Business Case (Wk 5) | 15% |
 | - Final Proposal Package (Wk 13) | 10% |
 | - Final Showcase Performance (Wk 14) | 20% |
-| **Consulting Role Performance** | **15%** |
-| - Weekly Workshop Submissions | 10% |
+| **In-Class Engagement & Process** | **15%** |
+| - Lab Checkpoints (*Weekly upload of the artifact created during the Student-Led Technical Presentations*) | 10% |
 | - Client/Red Team Audit Participation | 5% |
 | **Student-Led Technical Presentation** | **20%** |
 | - Peer Evaluation | 12% |
