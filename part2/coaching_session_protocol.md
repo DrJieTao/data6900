@@ -42,6 +42,9 @@
 ---
 
 **Outcome:**
+
 [ ] **Greenlight:** Ready to present.
+
 [ ] **Yellowlight:** Fix bugs/handout and re-submit via email in 48 hours.
+
 [ ] **Redlight:** Critical failure. Must reschedule or switch topic (Grade impact).
