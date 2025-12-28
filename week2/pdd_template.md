@@ -53,4 +53,4 @@ graph TD
 ### 3.2 The Hypothesis
 *   "By automating [Step X], we expect to reduce the time spent from [Current Time] to [Target Time]."
 *  **HINT**: Refer to your Segment 1 interview notes where you discussed 'Hours Saved' and 'Cost of Error' to fill this out.
-> _By implementing an AI Context Guardian to cross-reference meeting transcripts with the Master Budget Excel, we will reduce the budget reconciliation time from 2 hours to 30 seconds and reduce the financial risk of unauthorized shifts to near zero._
+> EXAMPLE: _By implementing an AI Context Guardian to cross-reference meeting transcripts with the Master Budget Excel, we will reduce the budget reconciliation time from 2 hours to 30 seconds and reduce the financial risk of unauthorized shifts to near zero._
