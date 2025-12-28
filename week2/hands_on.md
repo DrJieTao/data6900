@@ -83,7 +83,7 @@ Provide the output as a Markdown code block containing a RAFT-structured System 
 # Task
 Write a RAFT-structured System Prompt for an "AI Workflow Auditor." 
 The generated prompt must include these specific behavioral rules:
-1. **Inputs:** Use the "Original Meeting Transcript" and the "Discovery Interview Results" as your ONLY sources of truth.
+1. **Inputs:** Use the "Original Meeting Transcript" and the "Discovery Interview Results" as your ONLY sources of truth. You should prompt the user to provide these input items, one at a time.
 2. **Step-by-Step Pacing:** You are a "Wait-for-Input" agent. Do not perform the analysis until the user explicitly pastes the two inputs and says "Proceed."
 3. **Output Requirements:**
    - **PDD 2.1:** An ROI Table (Pain, Feasibility, Risk) with a 1-10 scoring system.
@@ -96,18 +96,15 @@ The generated prompt must include these specific behavioral rules:
 
 ---
 
-### Segment 3: The Strategic Analysis Chain (Session 2 - Execution)
-**Goal:** Run the "Auditor" to generate PDD content.
+## 4. Segment 3: The Execution (The Automatic Chain)
+**Goal:** Generate the core PDD content in a single pass.
 
-*   **Step 1:** Copy the System Prompt from Segment 2 into a New Chat.
-*   **Step 2:** Paste the Transcript and Interview Results.
-*   **Step 3 (Chain Link 1):** "Execute the ROI Analysis Table for PDD 2.1."
-*   **Step 4 (Chain Link 2):** "Perform the AI Suitability Analysis for PDD 2.2. Focus on why an LLM is required for the unstructured parts of the transcript."
-*   **Step 5 (Chain Link 3):** "Select the **Minimal Viable Workflow (MVW)** and draft the **Business Hypothesis** (Impact on hours and financial risk)."
-
+1.  **The Setup:** Copy the System Prompt generated in Segment 2 and paste it into a **New Chat**.
+2.  **The Trigger:** Notice the AI waits. Paste Artifact A (Transcript) + your results from Segment 1. Say **"Proceed."**
+3.  **The Narration:** *"I am using a single command, but the AI is internally chaining three separate tasks: ROI scoring, Suitability reasoning, and MVW selection. This ensures that the final hypothesis is grounded in the initial audit data."*
 ---
 
-### Segment 4: The Reflected Mermaid Blueprint
+### Segment 4: The Reflected Mermaid Blueprint (same conversation)
 **Goal:** Visualize the manual mess and highlight the Target Zone (MVW).
 
 ```markdown
@@ -118,9 +115,9 @@ You are a Senior Systems Architect and Mermaid.js expert.
 Mermaid.js flowchart code block.
 
 # Task
-Generate an "AS-IS" workflow diagram for Project Nova using the 5 Elements.
+Generate an "AS-IS" workflow diagram for Project Nova based on above analysis results in this conversation.
 
-# Few-Shot Examples
+# Examples
 Use these exact symbols and syntax:
 - `A[⚡ End of Meeting] --> B[📦 Transcript]`
 - `C[🛠️ Manual Excel Check] --> D{💎 Is Budget OK?}`
@@ -128,7 +125,7 @@ Use these exact symbols and syntax:
 - `D -- Yes --> F[🛠️ Draft Email]`
 
 # Instructions
-1. Highlight the "Budget Reconciliation" node in Orange: `style [NodeID] fill:#f90`.
+1. Highlight the "Budget Reconciliation" node (the MVW selected in Segment 3) in Orange: `style [NodeID] fill:#f90`.
 2. Ensure the logic gate (💎) correctly shows the "If/Then" split for the budget check.
 
 # Self-Reflection
@@ -137,9 +134,21 @@ Verify the Mermaid syntax is valid. Check that all 5 lecture symbols are used co
 
 ---
 
-## 4. Video Recording Narrative Guide
+## 5. Video Recording Narrative Guide
 
 1.  **Segment 1:** Be the "Client." Use the multiple-choice options to move fast. Emphasize the **4 hours of pain** and **$5k risk**.
 2.  **Segment 2:** Show the "Meta-Prompt." Tell students: *"We are building the tool that will do our homework for us."*
 3.  **Segment 3:** Show the **Wait-for-Input** behavior. It makes the AI look professional. When the ROI table appears, point out why "Budget" wins over "Legal."
 4.  **Segment 4:** Show the **Self-Reflection**. If the AI makes a mistake, let it fix it live. Show the final diagram in the Mermaid Live Editor.
+
+
+
+## 6. PDD Deliverable Mapping
+| PDD Section | Generated In |
+| :--- | :--- |
+| **1.1 The Scenario** | Segment 1 (Discovery) |
+| **1.2 AS-IS Map** | Segment 4 (Mermaid) |
+| **2.1 ROI Analysis** | Segment 3 (Internal Step 1) |
+| **2.2 AI Suitability** | Segment 3 (Internal Step 2) |
+| **3.1 Target Zone (MVW)** | Segment 3 (Internal Step 3) |
+| **3.2 The Hypothesis** | Segment 3 (Internal Step 3) |
