@@ -6,6 +6,7 @@
 
 **The Mission:**
 You are Consultants. Your first job is not to build, but to **Diagnose**. You must analyze a current manual workflow (your team's chosen personal task) and prove that it is worth automating.
+> Your goal is to identify your Minimal Viable Workflow (MVW)—the smallest slice of the process that provides immediate ROI.
 
 **Steps:**
 1.  **Select a Workflow:** Pick a repetitive personal task (e.g., "Processing Job Applications," "Meal Planning," "Summarizing Newsletters").
