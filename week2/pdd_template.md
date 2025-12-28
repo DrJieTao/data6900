@@ -52,3 +52,4 @@ graph TD
 
 ### 3.2 The Hypothesis
 *   "By automating [Step X], we expect to reduce the time spent from [Current Time] to [Target Time]."
+> **HINT**: Refer to your Segment 1 interview notes where you discussed 'Hours Saved' and 'Cost of Error' to fill this out.
