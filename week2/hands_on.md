@@ -1,7 +1,3 @@
-This is the finalized **Week 2 Hands-on Implementation Plan**, formatted for GitHub. You can copy and paste this directly into your repository.
-
-***
-
 # Week 2 Hands-on: The Workflow Auditor
 **Course:** DATA 6900: AI-Powered Business Process Automation (Spring 2026)  
 **Instructor:** Dr. Jie Tao  
@@ -147,12 +143,3 @@ Verify the Mermaid syntax is valid. Check that all 5 lecture symbols are used co
 2.  **Segment 2:** Show the "Meta-Prompt." Tell students: *"We are building the tool that will do our homework for us."*
 3.  **Segment 3:** Show the **Wait-for-Input** behavior. It makes the AI look professional. When the ROI table appears, point out why "Budget" wins over "Legal."
 4.  **Segment 4:** Show the **Self-Reflection**. If the AI makes a mistake, let it fix it live. Show the final diagram in the Mermaid Live Editor.
-
-***
-
-### **Scratch Pad (Finalized)**
-*   **Phase:** Final Plan Delivery.
-*   **MVW Focus:** Explicitly defined as the "Budget Reconciliation" target.
-*   **State Management:** Session 1 (Discovery) $\rightarrow$ Session 2 (Architecture/Execution).
-*   **Symbols:** ⚡, 📦, 🛠️, 💎, 🏁 integrated across all prompts.
-*   **PDD Support:** Complete coverage for Deliverable 1.
