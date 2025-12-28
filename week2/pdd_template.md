@@ -46,7 +46,7 @@ graph TD
 *Grading Criteria: Identifies relevant automation opportunities.*
 
 ### 3.1 The Target Zone
-*(Look at your diagram in Part 1.2. Which specific nodes will you replace with AI in Week 3?)*
+*(Look at your diagram in Part 1.2 (_The Minimal Viable Workflow_). Which specific nodes will you replace with AI in Week 3?)*
 *   **We will replace:** [Step Name]
 *   **We will keep human:** [Step Name]
 
