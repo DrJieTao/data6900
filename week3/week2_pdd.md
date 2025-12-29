@@ -1,7 +1,7 @@
 ### **Artifact 1: Populated Week 2 PDD (The "Source of Truth")**
 *This is the document you will "feed" to the AI in Step 2 of the video.*
 
-```markdown
+
 # Process Definition Document (PDD) - Phase 1: Analysis
 **Project Title:** Project Nova Financial Automation
 **Status:** Phase 1 Complete (AS-IS Analysis)
