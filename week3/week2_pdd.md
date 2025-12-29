@@ -56,25 +56,3 @@ The **Minimal Viable Workflow (MVW)** will target **Step G: Budget Reconciliatio
 ```
 
 ---
-
-### **Artifact 2: The Week 3 Hands-on Artifact Checklist**
-
-To execute the 5-step plan in the video, you need these **five specific prompt/data blocks** ready to copy-paste:
-
-| Step | Artifact Name | Description |
-| :--- | :--- | :--- |
-| **1** | **The Sub-Workflow Map** | The Mermaid `graph LR` that "zooms in" on Step G. |
-| **2** | **The Architect Interview Prompt** | The prompt that asks for the PDD context and interviews you for **Input/Processing/Output**. |
-| **3** | **The Universal Meta-Auditor** | The QA prompt you "inject" into the chat to perform the **Unit Test Loop**. |
-| **4** | **The Automated Chain Template** | The final "Super-Orchestrator" prompt that runs the verified tools end-to-end. |
-| **5** | **The Metric Extraction Prompt** | The "Value Auditor" that extracts (or provides fallback) KPIs for the PDD Dashboard. |
-
----
-
-### **Internal Scratch Pad (Ready for Execution)**
-*   **Source of Truth:** Week 2 PDD is now grounded in the "Buffed Transcript" data (4 hours, $5k risk, $10k limit).
-*   **MVW Selection:** Confirmed as **Step G** (Budget Reconciliation).
-*   **Iterative Loop:** Step 3 is designed to find a flaw (e.g., the $5k MSA rule is missed) and fix it.
-*   **Metric Strategy:** Step 5 includes a "Benchmark Fallback" so students always have numbers for their table.
-
-**Does this populated PDD and the Checklist look correct? If so, I will generate the detailed prompts for Steps 1 through 5.**
