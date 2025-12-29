@@ -53,6 +53,3 @@ The **Minimal Viable Workflow (MVW)** will target **Step G: Budget Reconciliatio
 
 ### 3.2 Business Hypothesis
 > By implementing an LLM-driven automation for Project Nova’s financial reconciliation, the team will reduce weekly manual effort by 5–8 hours and mitigate human errors costing up to $10k per incident.
-```
-
----
