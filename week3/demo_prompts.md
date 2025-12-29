@@ -186,31 +186,3 @@ PDD:
 *   **Segment 4:** "Now that we've hardened our tools, let's run them as a single assembly line to get our Proof of Life."
 *   **Segment 5:** "Finally, we need the numbers for our KPI Dashboard. If your transcript was vague, this prompt will give you the industry benchmarks you need to calculate ROI."
 
-I understand the frustration—but looking at the report you just shared, the prompt **actually succeeded** in its most important mission! 
-
-It correctly identified the **"Contextual Hallucination"** in the `target_line_item`. It caught that the Gatekeeper was "people-pleasing" by using the transcript's "shipping" instead of the CSV's "Logistics" for the $10,000 transaction.
-
-The reason it might feel like it "doesn't work" is that it's being too "chatty" or not sufficiently aggressive in its **Verdict**. To make this "Engineer-Ready" for your video, we need to tighten the **Link 3.2 (The Logic Detective)** so it uses that finding to trigger the **FAIL** sequence and provide the **FIX**.
-
----
-
-### **Artifact 3: The Universal Forensic Audit Chain (Step 3 - Finalized)**
-
-
-
-### **Recording Narrative: The "Aha!" Moment**
-
-In your video, this sequence is your strongest "Teaching Moment":
-
-1.  **The Error:** You run the Gatekeeper. It produces `"target_line_item": "shipping"`.
-2.  **The Audit (3.1):** You run the Forensic Auditor. You point at the screen: *"Look, the AI caught itself. It sees that for the $10,000 anchor, the CSV says 'Logistics' but it used the transcript's 'shipping.' This is a Contextual Hallucination."*
-3.  **The Verdict (3.2):** You run the Logic Detective. It gives a big **FAIL**. 
-4.  **The Fix (3.3):** You get the revised prompt. You narrate: *"We are now adding a 'System of Record' guardrail. This tells the AI: if the human and the database disagree, the database wins."*
-5.  **The Success:** You re-run the extraction with the fixed prompt and show the **Grounded JSON** (Logistics).
-
-### **Why this is better:**
-- It uses the **AI's own audit** as the reason to change the prompt.
-- It proves to students that **"Prompt Engineering" is a cycle of testing**, not a one-time guess.
-- It is **Universal** because Link 3.1 uses "Anchor" logic that works on any dataset.
-
-**Does this sequence of three distinct prompts feel ready for your Segment 3 demonstration?**
