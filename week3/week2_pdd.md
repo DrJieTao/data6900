@@ -1,5 +1,7 @@
 # Process Definition Document (PDD) - Phase 1: Analysis
+
 **Project Title:** Project Nova Financial Automation
+
 **Status:** Phase 1 Complete (AS-IS Analysis)
 
 ---
