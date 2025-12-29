@@ -3,7 +3,9 @@
 
 # Process Design Document (PDD) - Phase 1 Complete
 **Team Name:**
+
 **Project Title:**
+
 **Status:** Milestone 2 (Solution Design)
 
 ---
