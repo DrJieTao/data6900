@@ -4,6 +4,17 @@
 
 ---
 
+## 0. Overview & Objectives
+
+In Week 3, we successfully acted as "Surgeons," replacing a manual bottleneck with a precise, linear 3-node assembly line (Gatekeeper $\to$ Judge $\to$ Worker). It worked perfectly for the "Happy Path."
+
+**The Problem:** In our systematic stress tests, the linear chain failed. 
+1.  **Noise:** When the transcript was vague, the Gatekeeper "hallucinated" data to keep the line moving.
+2.  **Laziness:** The Judge approved budget shifts without explicitly checking the MSA, acting like a "Rubber Stamp."
+
+**The Solution:** In Week 4, we upgrade our system from a **Pipeline** to an **Intelligent Network**. We will introduce **Adaptive Design Patterns**—specifically the **Router** (to filter noise) and the **Evaluator-Optimizer Loop** (to force rigor)—managed by a central **Logic OS**.
+
+
 ## 1. Sequence Overview
 
 | Step | Activity | PDD Support |
@@ -201,3 +212,4 @@ I should be able to paste this output into a fresh LLM window to run the entire 
 > *   "We've done a lot of work today. If I close this chat, I lose it all. That's unacceptable."
 > *   "We use the **Compiler Pattern** to package everything—the Logic, the Tools, the Rubrics—into one **Master Prompt**."
 > *   "You can save this text file. It is your 'Software.' You can paste it into any LLM tomorrow, and it will run your entire Project Nova Intelligent Network."
+
