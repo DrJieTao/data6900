@@ -1,7 +1,3 @@
-Here is the **Finalized Week 4 Hands-on Package** with detailed **Video Narration Guides** inserted for every step.
-
-***
-
 # Week 4 Hands-on: The Intelligent Network
 **Course:** DATA 6900: AI-Powered Business Process Automation
 **Theme:** Adaptive Systems (Routers, Loops, and Logic).
