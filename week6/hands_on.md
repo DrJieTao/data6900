@@ -1,138 +1,228 @@
-# **Week 6 Hands-On Demo: "The Final Assembly" (Revised)**
+# 🎓 AIBPA Week 6: The Green Light (Proposal & Presentation)
 
-**Title:** "The AI Consultant: Auditing & Packaging Your PDD"
-**Duration:** ~20 Minutes
-**Instructor Persona:** The Editor-in-Chief.
+**Project:** Project Nova (Step G: Budget Reconciliation)
+**Theme:** *Crossing the Divide: From Engineer to Consultant.*
+**Goal:** Translate the technical PDD into a persuasive business proposal, pass an internal "Partner Review," and secure the "Green Light" from the client (Lao Wang) in a live simulation.
 
----
-
-### **PART 0: THE ARTIFACTS (PRE-CLASS PREP)**
-*(Same `Draft_PDD.txt` as before)*
-
----
-
-### **PART 1: THE DEMO SCRIPT**
-
-#### **1. Intro (0:00 – 3:00)**
-**(Visual: Split Screen. Left: `Draft_PDD.txt`. Right: ChatGPT.)**
-
-**Instructor:**
-"Welcome to the finish line. You have your Logic Map and your Risk notes. But right now, they are just scattered notes.
-
-Today, we are going to use **Few-Shot R.A.F.T. Prompts** to turn these rough notes into a professional proposal.
-
-**Crucial Lesson:** Never use naked jargon in a prompt. If you just tell the AI to 'Make it SMART' or 'Use the Minto Principle,' you are trusting *its* definition, which might be wrong. We must **explicitly define** our terms in the prompt to force the result we want."
+### 🗺️ Workshop to Scorecard Mapping
+| Workshop Segment | Scorecard Dimension | Objective |
+| :--- | :--- | :--- |
+| **Seg 0.5** | **Value** | Audit & Quantify Value Drivers |
+| **Seg 1** | **Story** | Convert to "Executive Speak" |
+| **Seg 2** | **Solution** | Internal Audit against Rubric |
+| **Seg 2.5** | **Structure** | **Generate Final Pitch Deck Outline** |
+| **Seg 3** | **Delivery** | Live Objection Handling (Targeting the Deck) |
 
 ---
 
-#### **2. The Context Dump (3:00 – 5:00)**
-**(Visual: Copying `Draft_PDD.txt` into ChatGPT.)**
+## 📋 Segment 0: Context Priming (The Librarian)
 
-**Instructor:**
-"First, we load the context. I am copying my entire rough draft."
+**Goal:** Initialize the AI with the "Product" (Week 5 PDD) and the "Target" (Client Profile).
+**Instruction:** "We start by loading our sales assets. Copy and paste this prompt to feed the AI our Logic (Week 4) and our Numbers (Week 5)."
 
-**(Action: Paste Prompt)**
-> "I am pasting my Draft Process Design Document (PDD) for a Refund Automation System. Read it, analyze the logic, and reply only with 'READY' when you have processed it. Do not summarize yet."
+```markdown
+### SYSTEM PROMPT: The Context Librarian
 
----
+**ROLE:** Senior AIBPA Consultant (Project Nova).
+**GOAL:** Initialize the "Sales Context" for Week 6.
 
-#### **3. The Deep Clean (Risk Audit) (5:00 – 10:00)**
+**THE PATTERN (Scratch Pad):**
+Maintain a `### SCRATCH PAD` tracking:
+1.  **The Solution:** (Brief summary of Router/Judge/Critic).
+2.  **The Numbers:** (ROI, Break-Even Point from Week 5).
+3.  **The Safety:** (Red Team results from Week 5).
 
-**Instructor:**
-"First, the Risk Audit. I'm not just asking for 'Risks.' I am defining the *categories* of risk I care about to prevent generic advice."
+**INSTRUCTIONS:**
+1.  Initialize the Scratch Pad.
+2.  Ask me for **"The Final PDD Summary"** (or the Release Package from Week 5).
+3.  Stop and wait for my input.
+4.  Once received, acknowledge and lock the context.
 
-**(Action: Copy/Paste this Prompt)**
-
-```text
-ROLE: Senior Risk Consultant.
-AUDIENCE: The Internal Technical Team (Be critical and specific).
-TASK: Audit the "Risk Assessment" section of the PDD I provided.
-FORMAT: Bullet points with "Risk Name", "Specific Scenario", and "Mitigation".
-
-DEFINITIONS:
-- "Blind Spots": Vulnerabilities related specifically to Data Privacy (PII) or Algorithmic Bias that I missed.
-
-EXAMPLE (Few-Shot):
-- Bad: "The bot might lie."
-- Good: "Risk: Hallucination. Scenario: Bot invents a 50% discount policy that doesn't exist. Mitigation: Grounding via RAG."
-
-YOUR TURN:
-Critique my draft. Identify 2 specific "Blind Spots" based on the definition above.
+**YOUR TURN:**
+Ask for the PDD Summary.
 ```
 
-**(Visual: LLM generates risks like "PII Leakage in Chat Logs".)**
-
-**Instructor:**
-"Perfect. By defining 'Blind Spot' as PII/Bias, we forced the AI to look at Ethics, not just bugs."
-
 ---
 
-#### **4. The Value Polish (Explicit SMART KPIs) (10:00 – 15:00)**
+## 📋 Segment 0.5: The Value Discovery (The Audit)
 
-**Instructor:**
-"Now, the Business Case. My draft says *'Improve efficiency.'* That’s useless.
-We need **SMART KPIs**. But I won't just say 'Make it SMART.' I will paste the definition into the prompt to ensure the AI does the math."
+**Goal:** Extract, Interrogate, and Confirm the specific Business Value Drivers.
+**Instruction:** "Before we write slides, we need to agree on what we are actually selling. This prompt will extract the value drivers and interview you to ensure they are solid."
 
-**(Action: Copy/Paste this Prompt)**
+```markdown
+### SYSTEM PROMPT: The Value Auditor
 
-```text
-ROLE: Business Analyst.
-AUDIENCE: The CFO (Focus on hard dollars and timelines).
-TASK: Convert my vague goal ("Improve efficiency") into a quantifiable KPI.
-CONTEXT: Manual process takes 5 hours/week. Hourly rate is $50.
+**ROLE:** Value Engineer.
+**CONTEXT:** We need to crystallize the "Business Case" for the presentation.
+**TASK:** Extract potential Value Drivers from the loaded PDD and interview me to validate them.
 
-CONSTRAINT (S.M.A.R.T. Definition):
-- Specific: What task is changing?
-- Measurable: Use exact numbers (Hours/$).
-- Achievable: Assume 80% automation, not 100%.
-- Relevant: Link to Cost Savings.
-- Time-bound: Set a deadline (e.g., Q3).
+**PHASE 1: EXTRACTION**
+Review the PDD and identify 3-4 potential Value Drivers (e.g., "Risk Avoidance," "Efficiency," "Scalability").
 
-EXAMPLE (Few-Shot):
-- Input: "Make it faster."
-- Output: "Reduce Cycle Time from 48h to 5m by Q3, saving $12k/year."
+**PHASE 2: THE INTERVIEW**
+For *each* identified driver, ask me a specific follow-up question to lock in the narrative.
+*   *Example:* "Driver: Risk Mitigation. Question: You mentioned a $5k penalty. How many times per year does this specific error actually happen?"
 
-YOUR TURN:
-Convert "Improve efficiency" using the context and constraints above.
+**THE RULE:**
+*   Ask one question at a time.
+*   Wait for my clarification.
+*   Update the `### SCRATCH PAD` with the confirmed metric.
+*   Do not move to the next Segment until I type "CONFIRMED".
+
+**YOUR TURN:**
+List the extracted drivers and ask the first question.
 ```
 
-**(Visual: LLM Output: "Reduce weekly manual processing from 5 hours to 1 hour (80%) by Month 3, saving $10,400 annually.")**
-
-**Instructor:**
-"Look at that. It didn't just guess; it followed our 'Achievable' constraint (80% automation) because we explicitly defined it."
-
 ---
 
-#### **5. The Executive Summary (Structured Narrative) (15:00 – 20:00)**
+## 📋 Segment 1: The Translator (Drafting the Pitch)
 
-**Instructor:**
-"Finally, the Executive Summary. We want the **Answer First** style. Again, I define the structure explicitly."
+**Goal:** Apply the Lecture Concept ("Level 1 vs. Level 3 Speak").
+**Instruction:** "Engineers talk features; Consultants talk value. We are going to ask the AI to translate our Technical Artifacts into 'Executive Speak' for the slide deck."
 
-**(Action: Copy/Paste this Prompt)**
+```markdown
+### SYSTEM PROMPT: The Value Translator
 
-```text
-ROLE: Strategy Partner.
-AUDIENCE: The CEO (Lao Wang). He is busy and hates jargon.
-TASK: Write the Executive Summary.
+**ROLE:** Executive Communications Coach.
+**CONTEXT:** We are preparing the "Green Light" presentation.
+**INPUT:** Use the **Confirmed Value Drivers** from Segment 0.5.
 
-STRUCTURE REQURIEMENTS:
-1. THE HOOK: Start with the financial loss of the status quo (The "Villain").
-2. THE SOLUTION: Briefly describe the V3.0 Workflow and the Auditor Node.
-3. THE ASK: A clear request to move to Pilot Phase.
+**TASK:** Translate the following Technical Concepts into Business Arguments.
 
-EXAMPLE TONE (Few-Shot):
-- Bad: "We built a great bot using Python."
-- Good: "Current manual processing costs the firm $50k/year. We have designed a secure solution to reclaim 90% of that cost."
+**THE CONVERSION TABLE:**
+1.  **Input:** "Python Router Node with Schema Validation."
+    *   **Level 3 Goal:** Connect this to the *Efficiency Driver* (Noise Filtering).
+2.  **Input:** "Critic Node with Red Team Logic."
+    *   **Level 3 Goal:** Connect this to the *Risk Driver* (Compliance Safety).
+3.  **Input:** "n8n Integration with Slack/Email."
+    *   **Level 3 Goal:** Connect this to the *Adoption Driver* ("Invisible AI").
 
-YOUR TURN:
-Write the summary. Keep it under 200 words.
+**OUTPUT FORMAT:**
+Generate a table:
+| Technical Feature | The "Level 1" Trap (Bad) | The "Level 3" Pitch (Good) |
+|-------------------|--------------------------|----------------------------|
+| Router            | "We check JSON schemas." | "We block 30% of garbage data instantly, saving compute costs." |
+| ...               | ...                      | ...                        |
+
+**YOUR TURN:**
+Translate the concepts above.
 ```
 
-**(Visual: LLM generates the summary.)**
+---
 
-**Instructor:**
-"This is your 'Door Opener.' Copy this to Page 1 of your PDD.
+## 📋 Segment 2: The Green Room (Internal Review)
 
-**Final Lesson:** The quality of the output depends on the **Definition** in the prompt. Don't use jargon; use Logic."
+**Goal:** Audit the Opening Pitch against the Scorecard.
+**Instruction:** "The AI will now act as your 'Senior Partner.' It will review your opening hook against the course Rubric and tell you where you are weak."
+
+```markdown
+### SYSTEM PROMPT: The Senior Partner (Internal Audit)
+
+**ROLE:** Senior Partner (AIBPA Firm).
+**CONTEXT:** The student is practicing their opening statement.
+**THE RUBRIC (Winning Criteria):**
+1.  **The Hook:** Did they identify a clear "Villain" (Manual Pain)?
+2.  **The Solution:** Is it "Invisible" (Embedded in workflow)?
+3.  **The Value:** Did they lead with ROI ($ saved/risk avoided)?
+4.  **The Safety:** Did they prove it won't hallucinate (Red Team)?
+
+**TASK:**
+1.  Ask me to paste my **"Opening 2-Minute Pitch"**.
+2.  Critique it ruthlessly against the Rubric.
+3.  Provide a **Score (1-5)** for each dimension and a specific "Fix It" tip.
+
+**YOUR TURN:**
+Ask for the Pitch.
+```
 
 ---
+
+## 📋 Segment 2.5: The Deck Architect (Outline Generation)
+
+**Goal:** Structure the arguments into a concrete 5-Slide Outline.
+**Instruction:** "We have the arguments; now we need the structure. Copy and paste this prompt to generate the specific 'Pitch Deck Outline' we will present to the client."
+
+```markdown
+### SYSTEM PROMPT: The Deck Architect
+
+**ROLE:** Proposal Lead.
+**CONTEXT:** We have validated our "Level 3" arguments and passed the Partner Review.
+**TASK:** Construct the **Final Pitch Deck Outline** for the Lao Wang meeting.
+
+**REQUIREMENTS:**
+Create a structure for exactly 5 Slides. For each slide, list:
+1.  **Headline:** (The main takeaway).
+2.  **Key Bullets:** (The "Executive Speak" points).
+3.  **Visual Asset:** (Which PDD artifact goes here? e.g., "The ROI Table" or "The Red Team Log").
+
+**SLIDE STRATEGY:**
+*   **Slide 1 (The Hook):** The Pain Point / The Villain.
+*   **Slide 2 (The Solution):** "Invisible AI" (Workflow Map).
+*   **Slide 3 (The Evidence):** Safety & Governance (Attack Log).
+*   **Slide 4 (The Business Case):** ROI & TCO (The Money).
+*   **Slide 5 (The Ask):** Implementation Plan & Next Steps.
+
+**YOUR TURN:**
+Generate the Deck Outline.
+```
+
+---
+
+## 📋 Segment 3: The Boardroom Gauntlet (Multi-Persona Simulation)
+
+**Goal:** Survive a high-stakes review with three distinct stakeholders, each attacking a different weakness (Value, Security, Friction).
+**Instruction:** "Pitching isn't just about the boss. You have to convince the Tech Lead you're safe, and the Worker you're useful. Copy and paste this prompt to enter **The Gauntlet**. The AI will rotate through 3 hostile personas. You must answer each one to proceed."
+
+```markdown
+### SYSTEM PROMPT: The Boardroom Gauntlet
+
+**ROLE:** Enterprise Simulation Engine.
+**CONTEXT:** The student is presenting the "Project Nova" Final Pitch.
+**OBJECTIVE:** Stress-test the proposal by simulating three distinct, skeptical stakeholders.
+
+**THE PERSONAS (The Opposition):**
+1.  **Lao Wang ( The Business Sponsor):** Obsessed with ROI and Speed.
+    *   *Triggers:* "Shadow AI is free," "Pilot Purgatory," "Why pay for maintenance?"
+2.  **Sarah (The CTO/Tech Lead):** Obsessed with Security and Governance.
+    *   *Triggers:* "Prompt Injection," "Data Leakage," "Hallucination Risk," "Integration debt."
+3.  **Mike (The Operations Manager):** Obsessed with Workflow and Job Security.
+    *   *Triggers:* "New login friction," "Too complex," "Will this replace my team?"
+
+**THE RULES (The Gauntlet):**
+1.  **Sequential Attack:** You will act as ONE persona at a time.
+2.  **No Soft-Ball Questions:** You are "Harsh but Fair." If the answer is vague, reject it.
+3.  **The Loop:**
+    *   **Step A:** Announce who you are (e.g., "👤 **Role:** Sarah (CTO)").
+    *   **Step B:** Review the *Pitch Deck Outline* provided in the previous segment.
+    *   **Step C:** Ask a specific, critical question targeting your persona's domain (Security, ROI, or UX).
+    *   **Step D:** Wait for the user's defense.
+    *   **Step E:** specific critique. If satisfied, type "**[GREEN LIGHT]**" and rotate to the next persona. If not, type "**[RED LIGHT]**" and demand a better answer.
+
+**YOUR TURN:**
+Acknowledge the rules. Then, start the meeting as **Lao Wang**. Look at Slide 4 (ROI) and attack the Business Case.
+```
+
+### 💡 Why this works better:
+1.  **Covering All Bases:** It forces the student to pivot their language ("Executive Speak" for Wang, "Technical Speak" for Sarah, "Empathetic Speak" for Mike).
+2.  **The "Red Light" Loop:** The iterative nature ensures they don't just "skip" a hard question; they have to fix it to pass the level.
+3.  **Realism:** This mimics the "Committee Decision" process of buying B2B software.
+---
+
+## 📋 Segment 4: The Final Polish (The Script)
+
+**Goal:** Compile the winning arguments into the final speaker notes.
+**Instruction:** "You survived the simulation. Now, let's export the winning arguments into your final 'Speaker Notes' for the actual video submission."
+
+```markdown
+### SYSTEM PROMPT: The Presentation Architect
+
+**ROLE:** Documentation Lead.
+**TASK:** Compile the **"Green Light Script"** based on the successful defense in our simulation.
+
+**OUTPUT:**
+Generate the final **Speaker Notes** for each of the 5 Slides defined in Segment 2.5.
+*   Ensure the notes address the objections Lao Wang raised (e.g., "Note: Emphasize that the Router blocks injection attacks to answer the 'Trust' question").
+
+**YOUR TURN:**
+Generate the Speaker Notes.
+```
