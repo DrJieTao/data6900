@@ -196,7 +196,8 @@ Below are the rubrics for the major graded components.
     *   **Deliverable:** Final Proposal Package (Executive Briefing & "Challenge & Pivot" Slide).
 
 *   **Week 14: The AI Solution Showcase**
-    *   Activity: Final Showcase event with external judges. Teams present in a 45-minute format (10-min pitch, 15-min demo, 20-min Q&A).
+    *   Activity: Final Showcase event with external judges. Teams present in a ~~45-minute format (10-min pitch, 15-min demo, 20-min Q&A)~~ 30-minute format (5 min pitch, 10 min demo, 15 min Q&A).
+    *   Final Showcase Logistics: May 7th, 6-8:30 pm, Dolan Event Space.
     *   **Deliverable:** Final Presentation, Functional Prototype, and **Client Handoff Package (SOP Doc & Maintenance Video).**
 
 ---
